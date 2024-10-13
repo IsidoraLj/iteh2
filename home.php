@@ -36,7 +36,7 @@
                         <thead>
                             <tr>
                                 <th>Predmet</th>
-                                <th>Katedra</th>
+                                <th>Profesor</th>
                                 <th>Sala</th>
                                 <th>Datum</th>
                                 <th>Selektuj</th>
@@ -46,7 +46,7 @@
                             <?php while ($red = $result->fetch_array()) { ?>
                                 <tr>
                                     <td><?php echo $red["predmet"] ?></td>
-                                    <td><?php echo $red["katedra"] ?></td>
+                                    <td><?php echo $red["profesor"] ?></td>
                                     <td><?php echo $red["sala"] ?></td>
                                     <td><?php echo $red["datum"] ?></td>
                                     <td>
@@ -92,8 +92,8 @@
                                 <input type="text" name="predmet" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label>Katedra</label>
-                                <input type="text" name="katedra" class="form-control" required>
+                                <label>Profesor</label>
+                                <input type="text" name="profesor" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label>Sala</label>
@@ -126,8 +126,8 @@
                                 <input id="predmet" type="text" name="predmet" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label>Katedra</label>
-                                <input id="katedra" type="text" name="katedra" class="form-control" required>
+                                <label>Profesor</label>
+                                <input id="profesor" type="text" name="profesor" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label>Sala</label>
@@ -158,7 +158,7 @@
             let selectedRow = $(this).closest('tr');
 
             let predmet = selectedRow.find('td:eq(0)').text();
-            let katedra = selectedRow.find('td:eq(1)').text();
+            let profesor = selectedRow.find('td:eq(1)').text();
             let sala = selectedRow.find('td:eq(2)').text();
             let datum = selectedRow.find('td:eq(3)').text();
 
@@ -166,7 +166,7 @@
 
             $('#id_predmeta').val(id);
             $('#predmet').val(predmet);
-            $('#katedra').val(katedra);
+            $('#profesor').val(profesor);
             $('#sala').val(sala);
             $('#datum').val(datum);
         });
